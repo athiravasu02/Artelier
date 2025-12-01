@@ -2,7 +2,7 @@ let brushColor;
 let brushSize = 10;
 let brushType = 'smooth';
 
-let colors = ['#FF7E0D', '#F6EB14', '#EF4C8F', '#44D62C', '#FF4F58', '#6A33FF'];
+let colors = ['#FF0000', '#FFC130', '#27CA40', '#27C2CA', '#2742CA', '#7E27CA', '#CA279F'];
 
 let promptData = [
   {
@@ -100,7 +100,7 @@ function setup() {
   let promptBtn = createButton('Generate A New Prompt')
     .parent(uiDiv)
     .mousePressed(generatePrompt);
-  styleButton(promptBtn, '#F37021', 'white');
+  styleButton(promptBtn, '#FC5C14', 'white');
 
   // Initial prompt
   generatePrompt();
@@ -109,7 +109,7 @@ function setup() {
   createP('Brush Type').parent(uiDiv).style('font-weight', 'bold');
   ['Smooth', 'Crayon', 'Watercolor'].forEach(type => {
     let btn = createButton(type).parent(uiDiv);
-    styleButton(btn, '#3B2CC7', 'white');
+    styleButton(btn, '#4E3DE5', 'white');
     btn.mousePressed(() => brushType = type.toLowerCase());
   });
 
@@ -117,7 +117,7 @@ function setup() {
   createP('Brush Thickness').parent(uiDiv).style('font-weight', 'bold').style('margin-top', '10px');
   [{ n: 'Small', v: 5 }, { n: 'Medium', v: 10 }, { n: 'Large', v: 20 }].forEach(s => {
     let btn = createButton(s.n).parent(uiDiv);
-    styleButton(btn, '#EF4C8F', 'white');
+    styleButton(btn, '#EA53EA', 'white');
     btn.mousePressed(() => brushSize = s.v);
   });
 
